@@ -1,0 +1,170 @@
+/*$colorPrimary2 : #6c193e;
+$colorPrimary1 : #a9da88;
+$colorSecondary1 : #f0ffc9;
+*/
+/*
+$colorPrimary2 : #900438;
+$colorPrimary1 : #022B60;
+$colorSecondary1 : #D5E3ED;
+*/
+/*
+$colorPrimary2 : #A8DBA8;
+$colorPrimary1 : #79BD9A;
+$colorSecondary1 : #CFF09E;
+*/
+.Card {
+  display: -ms-grid;
+  display: grid;
+  width: 600px;
+  height: 320px;
+  -ms-grid-columns: 200px auto;
+      grid-template-columns: 200px auto;
+}
+
+.Card .left {
+  background-color: #88b988;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.Card .right {
+  background-color: #58a07b;
+  position: relative;
+  color: #FFF;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.Card .right .close-btn {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.Card .right .top-fields {
+  position: absolute;
+  right: 30px;
+  top: 85px;
+  text-align: right;
+  color: #fff;
+}
+
+.Card .right .top-fields .name {
+  font-size: 37px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.Card .right .top-fields .title {
+  font-size: 22px;
+}
+
+.Card .right .bottom-fields {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  text-align: right;
+  list-style-type: none;
+  line-height: 1.3em;
+}
+
+.Card .right .bottom-fields a {
+  color: #fff;
+}
+
+.Card .right .bottom-fields a:hover {
+  color: #CFF09E;
+  -webkit-transition: 100ms;
+  transition: 100ms;
+}
+
+.Card .logo {
+  width: 100%;
+  padding: 35px 45px 8px 45px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Card .company-name {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 320px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* flip-card:hover */
+.flipped .flip-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.29);
+  border-radius: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #88b988;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flip-card-front .open-btn {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=Card.css.map */
