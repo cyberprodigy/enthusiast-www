@@ -7,6 +7,7 @@
     "@types/node": "12.0.0",
     "@types/react": "16.8.17",
     "@types/react-dom": "16.8.4",
+    "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -15,8 +16,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "image": "cp Dockerfile ./build && cd build && sudo docker build -t enthusiast/www .",
-    "publish": "sudo docker push enthusiast/www",
+    "publish": "npm-run-all publish:*",
+    "publish:build": "react-scripts build",
+    "publish:image": "cp Dockerfile ./build && cp ./src/rekviziti.txt ./build/ &&  cd build && sudo docker build -t enthusiast/www .",
+    "publish:login": "sudo docker login -u cyberprodigy",
+    "publish:push": "sudo docker push enthusiast/www",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
